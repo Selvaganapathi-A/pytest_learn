@@ -22,7 +22,7 @@ class DummyResponse:
 
 def test_todo(monkeypatch: pytest.MonkeyPatch):
 
-    def mockrequest(*args, **kwargs):
+    def mockrequest(*args, **kwargs) -> DummyResponse:
         return DummyResponse()
 
     monkeypatch.setattr(requests, "get", mockrequest)

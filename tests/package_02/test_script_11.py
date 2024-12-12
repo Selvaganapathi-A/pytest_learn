@@ -17,7 +17,7 @@ def test__linux_prepare_install():
 @pytest.mark.xfail(raises=ZeroDivisionError)
 def test__zero_division_error():
     a = 1 / 0
-    print(a)
+    assert a == float('inf')
 
 
 @pytest.mark.core

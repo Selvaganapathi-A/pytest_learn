@@ -11,5 +11,4 @@ def grant_user_access(name: str):
         return False
     USER['access-status'] = 'Access Granted'
     USER['service'] = 'aws'
-    #
     return True
